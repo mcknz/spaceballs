@@ -1,21 +1,26 @@
 /* AUTO GENERATED FILE. DO NOT MODIFY. YOU WILL LOSE YOUR CHANGES ON BUILD. */
 
 export namespace Images {
-    export class ImagesBackgroundTemplate {
-        static getName(): string { return 'background_template'; };
+    export class ImagesSpaceship {
+        static getName(): string { return 'Spaceship'; };
 
-        static getPNG(): string { return require('assets/images/background_template.png'); };
+        static getPNG(): string { return require('assets/images/Spaceship.png'); };
+    }
+    export class ImagesSpaceship {
+        static getName(): string { return 'Spaceship'; };
+
+        static getPNG(): string { return require('assets/images/Spaceship.png'); };
     }
 }
 
 export namespace Spritesheets {
-    export class SpritesheetsMetalslugMummy {
-        static getName(): string { return 'metalslug_mummy'; };
+    export class SpritesheetsProjectileSprites {
+        static getName(): string { return 'projectileSprites'; };
 
-        static getPNG(): string { return require('assets/spritesheets/metalslug_mummy.[37,45,18,0,0].png'); };
-        static getFrameWidth(): number { return 37; };
-        static getFrameHeight(): number { return 45; };
-        static getFrameMax(): number { return 18; };
+        static getPNG(): string { return require('assets/spritesheets/projectileSprites.[31,31].png'); };
+        static getFrameWidth(): number { return 31; };
+        static getFrameHeight(): number { return 31; };
+        static getFrameMax(): number { return -1; };
         static getMargin(): number { return 0; };
         static getSpacing(): number { return 0; };
     }
@@ -64,39 +69,11 @@ export namespace Atlases {
 }
 
 export namespace Audio {
-    export class AudioMusic {
-        static getName(): string { return 'music'; };
-
-        static getAC3(): string { return require('assets/audio/music.ac3'); };
-        static getM4A(): string { return require('assets/audio/music.m4a'); };
-        static getMP3(): string { return require('assets/audio/music.mp3'); };
-        static getOGG(): string { return require('assets/audio/music.ogg'); };
-    }
+    class IExistSoTypeScriptWillNotComplainAboutAnEmptyNamespace {}
 }
 
 export namespace Audiosprites {
-    enum AudiospritesSfxSprites {
-        Laser1 = <any>'laser1',
-        Laser2 = <any>'laser2',
-        Laser3 = <any>'laser3',
-        Laser4 = <any>'laser4',
-        Laser5 = <any>'laser5',
-        Laser6 = <any>'laser6',
-        Laser7 = <any>'laser7',
-        Laser8 = <any>'laser8',
-        Laser9 = <any>'laser9',
-    }
-    export class AudiospritesSfx {
-        static getName(): string { return 'sfx'; };
-
-        static getAC3(): string { return require('assets/audiosprites/sfx.ac3'); };
-        static getJSON(): string { return require('assets/audiosprites/sfx.json'); };
-        static getM4A(): string { return require('assets/audiosprites/sfx.m4a'); };
-        static getMP3(): string { return require('assets/audiosprites/sfx.mp3'); };
-        static getOGG(): string { return require('assets/audiosprites/sfx.ogg'); };
-
-        static Sprites = AudiospritesSfxSprites;
-    }
+    class IExistSoTypeScriptWillNotComplainAboutAnEmptyNamespace {}
 }
 
 export namespace GoogleWebFonts {
@@ -104,32 +81,11 @@ export namespace GoogleWebFonts {
 }
 
 export namespace CustomWebFonts {
-    export class Fonts2DumbWebfont {
-        static getName(): string { return '2Dumb-webfont'; };
-
-        static getFamily(): string { return '2dumbregular'; };
-
-        static getCSS(): string { return require('!file-loader?name=assets/fonts/[name].[ext]!assets/fonts/2Dumb-webfont.css'); };
-        static getEOT(): string { return require('!file-loader?name=assets/fonts/[name].[ext]!assets/fonts/2Dumb-webfont.eot'); };
-        static getSVG(): string { return require('!file-loader?name=assets/fonts/[name].[ext]!assets/fonts/2Dumb-webfont.svg'); };
-        static getTTF(): string { return require('!file-loader?name=assets/fonts/[name].[ext]!assets/fonts/2Dumb-webfont.ttf'); };
-        static getWOFF(): string { return require('!file-loader?name=assets/fonts/[name].[ext]!assets/fonts/2Dumb-webfont.woff'); };
-    }
+    class IExistSoTypeScriptWillNotComplainAboutAnEmptyNamespace {}
 }
 
 export namespace BitmapFonts {
-    export class FontsFontFnt {
-        static getName(): string { return 'font_fnt'; };
-
-        static getFNT(): string { return require('assets/fonts/font_fnt.fnt'); };
-        static getPNG(): string { return require('assets/fonts/font_fnt.png'); };
-    }
-    export class FontsFontXml {
-        static getName(): string { return 'font_xml'; };
-
-        static getPNG(): string { return require('assets/fonts/font_xml.png'); };
-        static getXML(): string { return require('assets/fonts/font_xml.xml'); };
-    }
+    class IExistSoTypeScriptWillNotComplainAboutAnEmptyNamespace {}
 }
 
 export namespace JSON {
@@ -145,23 +101,10 @@ export namespace Text {
 }
 
 export namespace Scripts {
-    export class ScriptsBlurX {
-        static getName(): string { return 'BlurX'; };
-
-        static getJS(): string { return require('assets/scripts/BlurX.js'); };
-    }
-    export class ScriptsBlurY {
-        static getName(): string { return 'BlurY'; };
-
-        static getJS(): string { return require('assets/scripts/BlurY.js'); };
-    }
+    class IExistSoTypeScriptWillNotComplainAboutAnEmptyNamespace {}
 }
 export namespace Shaders {
-    export class ShadersPixelate {
-        static getName(): string { return 'pixelate'; };
-
-        static getFRAG(): string { return require('assets/shaders/pixelate.frag'); };
-    }
+    class IExistSoTypeScriptWillNotComplainAboutAnEmptyNamespace {}
 }
 export namespace Misc {
     class IExistSoTypeScriptWillNotComplainAboutAnEmptyNamespace {}
