@@ -3,10 +3,12 @@ import Spaceship from '../Items/spaceship';
 
 export default class Title extends Phaser.State {
     private projectileSpritesheet: Phaser.Sprite = null;
+    private spaceshipImage: Phaser.Image = null;
     private weapon: Phaser.Weapon = null;
 
     public preload(): void {
-
+        let spaceship = new Spaceship();
+        this.spaceshipImage = spaceship.GetImage(this.game);
         let gameX: number = this.game.world.centerX;
         let gameY: number = this.game.world.centerY;
 
