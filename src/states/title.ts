@@ -1,4 +1,5 @@
 import * as Assets from '../assets';
+import Spaceship from '../Items/spaceship';
 
 export default class Title extends Phaser.State {
     private projectileSpritesheet: Phaser.Sprite = null;
