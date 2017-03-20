@@ -6,24 +6,37 @@ export default class Preloader extends Phaser.State {
     private preloadFrameSprite: Phaser.Sprite = null;
 
     public preload(): void {
-        this.preloadBarSprite = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, Assets.Atlases.AtlasesPreloadSpritesArray.getName(), Assets.Atlases.AtlasesPreloadSpritesArray.Frames.PreloadBar);
-        // this.preloadBarSprite = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, Assets.Atlases.AtlasesPreloadSpritesHash.getName(), Assets.Atlases.AtlasesPreloadSpritesHash.Frames.PreloadBar);
-        // this.preloadBarSprite = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, Assets.Atlases.AtlasesPreloadSpritesXml.getName(), Assets.Atlases.AtlasesPreloadSpritesXml.Frames.PreloadBar);
-        this.preloadBarSprite.anchor.setTo(0, 0.5);
-        this.preloadBarSprite.x -= this.preloadBarSprite.width * 0.5;
 
-        this.preloadFrameSprite = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, Assets.Atlases.AtlasesPreloadSpritesArray.getName(), Assets.Atlases.AtlasesPreloadSpritesArray.Frames.PreloadFrame);
-        // this.preloadFrameSprite = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, Assets.Atlases.AtlasesPreloadSpritesHash.getName(), Assets.Atlases.AtlasesPreloadSpritesHash.Frames.PreloadFrame);
-        // this.preloadFrameSprite = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, Assets.Atlases.AtlasesPreloadSpritesXml.getName(), Assets.Atlases.AtlasesPreloadSpritesXml.Frames.PreloadFrame);
-        this.preloadFrameSprite.anchor.setTo(0.5);
+        let gameX = this.game.world.centerX;
+        let gameY = this.game.world.centerY;
+        let preloadSpritesArrayName = Assets.Atlases.AtlasesPreloadSpritesArray.getName();
 
+        this.loadBarSprite(gameX, gameY, preloadSpritesArrayName);
+        this.loadFrameSprite(gameX, gameY, preloadSpritesArrayName);
+        
         this.game.load.setPreloadSprite(this.preloadBarSprite);
 
-        AssetUtils.Loader.loadAllAssets(this.game, this.waitForSoundDecoding, this);
+        AssetUtils.Loader.loadAllAssets(this.game, this.startGame, this);
     }
 
-    private waitForSoundDecoding(): void {
-        AssetUtils.Loader.waitForSoundDecoding(this.startGame, this);
+    private loadBarSprite(x, y, arrayName): void {
+        this.preloadBarSprite = this.game.add.sprite(
+            x,
+            y,
+            arrayName,
+            Assets.Atlases.AtlasesPreloadSpritesArray.Frames.PreloadBar
+        );
+        this.preloadBarSprite.anchor.setTo(0, 0.5);
+        this.preloadBarSprite.x -= this.preloadBarSprite.width * 0.5;
+    }
+
+    private loadFrameSprite(x, y, arrayName): void {
+        this.preloadFrameSprite = this.game.add.sprite(
+            x,
+            y,
+            arrayName,
+            Assets.Atlases.AtlasesPreloadSpritesArray.Frames.PreloadFrame);
+        this.preloadFrameSprite.anchor.setTo(0.5);
     }
 
     private startGame(): void {
