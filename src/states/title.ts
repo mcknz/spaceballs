@@ -11,7 +11,6 @@ export default class Title extends Phaser.State {
         this.spaceshipImage = spaceship.GetImage(this.game);
         let gameX: number = this.game.world.centerX;
         let gameY: number = this.game.world.centerY;
-
         this.addProjectiles(gameX, gameY);
         this.projectileSpritesheet = this.game.add.sprite(
             gameX,
@@ -27,7 +26,7 @@ export default class Title extends Phaser.State {
     }
 
     private addProjectiles(x: number, y: number): void {
-        this.weapon = this.add.weapon(10, 'bullet'); 
+        this.weapon = this.add.weapon(10, 'bullet');
         this.weapon.fireFrom.setTo(x, y, 1,1);
     }
 }
