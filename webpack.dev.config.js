@@ -11,6 +11,7 @@ module.exports = {
         path: path.join(__dirname, 'dist'),
         filename: 'game.js'
     },
+    devtool: 'source-map',
     resolve: {
         extensions: ['.ts', '.js'],
         alias: {

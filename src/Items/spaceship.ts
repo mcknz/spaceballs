@@ -4,25 +4,30 @@ export default class Spaceship extends Item {
     /**
      *
      */
-    constructor() {
-        super();
-
-    }
     private _spaceshipImage: Phaser.Image;
-    private _width: Number = 64;
-    private _height: Number = 64;
+
+    constructor(game) {
+        super();
+        this.ImageHeight = 64;
+        this.ImageWidth = 64;
+        let center = super.GetImageCenter(game.world.centerX, game.world.centerY);
+        this._spaceshipImage = game.add.image(center.x, center.y, Assets.Images.ImagesSpaceship.getName());
+        this._spaceshipImage.anchor.setTo(0.5, 0.5);
+    }
+
     GetImage(game) {
-        let x = game.world.centerX - (this._width / 2);
-        this._spaceshipImage = game.add.image(, game.world.centerY, Assets.Images.ImagesSpaceship.getName());
         return this._spaceshipImage;
     }
-    RotateClockwise(direction) {
-        this._spaceshipImage.angle += 1;
+    RotateClockwise() {
+        this._spaceshipImage.angle += 5;
     }
     RotateCounterClockwise() {
-        this._spaceshipImage.angle -= 1;
+        this._spaceshipImage.angle -= 5;
     }
-    Fire(game){
+    AboutFace() {
+        this._spaceshipImage.angle -= 180;
+    }
+    Fire(game) {
 
     }
 
