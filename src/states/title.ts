@@ -43,10 +43,10 @@ export default class Title extends Phaser.State {
         // this.game.camera.flash(0x000000, 1000);
     }
     public update(): void {
-        if (this._keys.Left.isDown){
+        if (this._keys.Left.isDown) {
             this.spaceship.RotateClockwise();
         }
-        if (this._keys.Right.isDown){
+        if (this._keys.Right.isDown) {
             this.spaceship.RotateCounterClockwise();
         }
     }
